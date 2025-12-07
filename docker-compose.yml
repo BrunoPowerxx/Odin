@@ -8,8 +8,8 @@ services:
       - app_data:/app/data
     working_dir: /app
     environment:
-      GDRIVE_JSON_URL: ${{ secrets.GDRIVE_JSON_URL }}
-      GDRIVE_BUILDER_URL: ${{ secrets.GDRIVE_BUILDER_URL }}
+      GDRIVE_JSON_URL: ${GDRIVE_JSON_URL}
+      GDRIVE_BUILDER_URL: ${GDRIVE_BUILDER_URL}
     command: python entrypoint.py
 
 volumes:
