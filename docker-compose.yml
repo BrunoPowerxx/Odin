@@ -5,10 +5,13 @@ services:
     image: python:3.11-slim
     container_name: mzansi_scraper
     volumes:
-      - ./:/app
-      - app_data:/app/data
+      - ./:/app            # mount repo so entrypoint.py exists
+      - app_data:/app/data # named volume for JSON + temp league scripts
     working_dir: /app
     environment:
       GDRIVE_JSON_URL: ${GDRIVE_JSON_URL}
       GDRIVE_BUILDER_URL: ${GDRIVE_BUILDER_URL}
     command: /bin/bash -c "apt-get update && apt-get install -y curl && python entrypoint.py"
+
+volumes:
+  app_data: {}
