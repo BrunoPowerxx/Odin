@@ -5,10 +5,13 @@ services:
     image: python:3.11-slim
     container_name: mzansi_scraper
     volumes:
-      - ./:/app           # <-- mount repo so entrypoint.py exists
+      - ./:/app            # mount repo so entrypoint.py exists
       - app_data:/app/data
     working_dir: /app
     environment:
       GDRIVE_JSON_URL: ${GDRIVE_JSON_URL}
       GDRIVE_BUILDER_URL: ${GDRIVE_BUILDER_URL}
     command: python entrypoint.py
+
+volumes:
+  app_data: {}
