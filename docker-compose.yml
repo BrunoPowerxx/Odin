@@ -1,0 +1,16 @@
+version: "3.9"
+
+services:
+  scraper:
+    image: python:3.11-slim
+    container_name: mzansi_scraper
+    volumes:
+      - app_data:/app/data
+    working_dir: /app
+    environment:
+      GDRIVE_JSON_URL: ${{ secrets.GDRIVE_JSON_URL }}
+      GDRIVE_BUILDER_URL: ${{ secrets.GDRIVE_BUILDER_URL }}
+    command: python entrypoint.py
+
+volumes:
+  app_data:
