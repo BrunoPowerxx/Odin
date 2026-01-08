@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block title %}Home - Django Demo Site{% endblock %}
+
+{% block content %}
+<div style="text-align: center; padding: 3rem 0;">
+    <h1 style="font-size: 3rem; margin-bottom: 1rem; color: #2c3e50;">Welcome to Django Demo</h1>
+    <p style="font-size: 1.25rem; color: #7f8c8d; margin-bottom: 2rem;">A simple multi-page Django application ready for deployment</p>
+    <a href="{% url 'pages:about' %}" class="btn" style="font-size: 1.1rem;">Learn More</a>
+</div>
+
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; margin-top: 4rem;">
+    <div style="background: #ecf0f1; padding: 2rem; border-radius: 8px;">
+        <h3 style="color: #2c3e50; margin-bottom: 1rem;">Easy to Deploy</h3>
+        <p style="color: #7f8c8d;">Configured for seamless deployment to Render.com with PostgreSQL support</p>
+    </div>
+    <div style="background: #ecf0f1; padding: 2rem; border-radius: 8px;">
+        <h3 style="color: #2c3e50; margin-bottom: 1rem;">Multiple Pages</h3>
+        <p style="color: #7f8c8d;">Includes home, about, blog, and contact pages with clean navigation</p>
+    </div>
+    <div style="background: #ecf0f1; padding: 2rem; border-radius: 8px;">
+        <h3 style="color: #2c3e50; margin-bottom: 1rem;">Production Ready</h3>
+        <p style="color: #7f8c8d;">WhiteNoise for static files, security best practices, and environment config</p>
+    </div>
+</div>
+{% endblock %}
