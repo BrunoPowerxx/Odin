@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block title %}Contact - Django Demo Site{% endblock %}
+
+{% block content %}
+<h1 style="font-size: 2.5rem; margin-bottom: 2rem; color: #2c3e50;">Get in Touch</h1>
+
+<div style="max-width: 600px;">
+    <div style="background: #ecf0f1; padding: 2rem; border-radius: 8px; margin-bottom: 2rem;">
+        <h3 style="color: #2c3e50; margin-bottom: 1rem;">Contact Information</h3>
+        <p style="color: #555; line-height: 1.8;">
+            This is a demo contact page. In a production application, you would typically 
+            include a contact form here that sends emails or stores messages in the database.
+        </p>
+    </div>
+    
+    <div style="background: #ecf0f1; padding: 2rem; border-radius: 8px;">
+        <h3 style="color: #2c3e50; margin-bottom: 1rem;">Deployment Instructions</h3>
+        <ol style="margin-left: 2rem; color: #555; line-height: 2;">
+            <li>Push this code to a GitHub repository</li>
+            <li>Create a new Web Service on Render.com</li>
+            <li>Connect your GitHub repository</li>
+            <li>Set build command: <code>./build.sh</code></li>
+            <li>Set start command: <code>gunicorn mysite.wsgi:application</code></li>
+            <li>Add a PostgreSQL database</li>
+            <li>Set environment variables (SECRET_KEY, DATABASE_URL)</li>
+            <li>Deploy!</li>
+        </ol>
+    </div>
+</div>
+{% endblock %}
