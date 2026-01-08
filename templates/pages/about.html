@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+
+{% block title %}About - Django Demo Site{% endblock %}
+
+{% block content %}
+<h1 style="font-size: 2.5rem; margin-bottom: 1.5rem; color: #2c3e50;">About This Project</h1>
+
+<div style="max-width: 800px;">
+    <p style="font-size: 1.1rem; margin-bottom: 1.5rem; color: #555;">
+        This is a demonstration Django website built to showcase a multi-page application structure 
+        that's ready for deployment to Render.com or any other hosting platform.
+    </p>
+    
+    <h2 style="font-size: 1.8rem; margin: 2rem 0 1rem; color: #2c3e50;">Features</h2>
+    <ul style="margin-left: 2rem; color: #555; line-height: 2;">
+        <li>Clean, responsive design with custom CSS</li>
+        <li>Multiple interconnected pages with navigation</li>
+        <li>Blog functionality with Django models</li>
+        <li>Admin interface for content management</li>
+        <li>Static file handling with WhiteNoise</li>
+        <li>Environment-based configuration</li>
+        <li>PostgreSQL support for production</li>
+        <li>Ready-to-use build script for Render</li>
+    </ul>
+    
+    <h2 style="font-size: 1.8rem; margin: 2rem 0 1rem; color: #2c3e50;">Technology Stack</h2>
+    <ul style="margin-left: 2rem; color: #555; line-height: 2;">
+        <li>Django 4.2</li>
+        <li>Python 3.11</li>
+        <li>Gunicorn (WSGI server)</li>
+        <li>WhiteNoise (Static files)</li>
+        <li>PostgreSQL (Production database)</li>
+    </ul>
+</div>
+{% endblock %}
